@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:hint="Number 1"
         android:inputType="numberDecimal"/>
-
     <!-- 2ND NUMBER INPUT -->
     <EditText
         android:id="@+id/number2"
