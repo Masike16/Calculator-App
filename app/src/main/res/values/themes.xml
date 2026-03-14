@@ -1,9 +1,21 @@
+<!-- Masike
+     ST10452404
+     OPSC CALCULATOR ICE TASK 1 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.CalculatorICETask1" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Theme.CalculatorICETask1" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary app color -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+
+        <item name="android:statusBarColor">@color/primaryBlue</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/backgroundGray</item>
+
+        <!-- Colour background -->
+        <item name="android:windowBackground">@color/backgroundGray</item>
+
     </style>
 
-    <style name="Theme.CalculatorICETask1" parent="Base.Theme.CalculatorICETask1" />
 </resources>

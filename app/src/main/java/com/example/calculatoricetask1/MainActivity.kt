@@ -1,7 +1,8 @@
 package com.example.calculatoricetask1
 /*
-MASIKE
-ST10452404 ICE TASK 1
+Masike
+ST10452404
+OPSC CALCULATOR ICE TASK 1
  */
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,14 +17,15 @@ class MainActivity : AppCompatActivity() {
         val number1 = findViewById<EditText>(R.id.number1)
         val number2 = findViewById<EditText>(R.id.number2)
 
-        val btnAdd = findViewById<Button>(R.id.btnAdd)
-        val btnSubtract = findViewById<Button>(R.id.btnSubtract)
+        val btnAdd = findViewById<Button>(R.id.btnAddition)
+        val btnSubtract = findViewById<Button>(R.id.btnSubtraction)
         val btnMultiply = findViewById<Button>(R.id.btnMultiply)
-        val btnDivide = findViewById<Button>(R.id.btnDivide)
+        val btnDivide = findViewById<Button>(R.id.btnDivision)
 
         val txtResult = findViewById<TextView>(R.id.txtResult)
 
         fun getNumbers(): Pair<Double, Double>? {
+
             val num1 = number1.text.toString()
             val num2 = number2.text.toString()
 
@@ -38,24 +40,21 @@ class MainActivity : AppCompatActivity() {
         btnAdd.setOnClickListener {
             val numbers = getNumbers()
             numbers?.let {
-                val result = it.first + it.second
-                txtResult.text = "Result: $result"
+                txtResult.text = "Result: ${it.first + it.second}"
             }
         }
 
         btnSubtract.setOnClickListener {
             val numbers = getNumbers()
             numbers?.let {
-                val result = it.first - it.second
-                txtResult.text = "Result: $result"
+                txtResult.text = "Result: ${it.first - it.second}"
             }
         }
 
         btnMultiply.setOnClickListener {
             val numbers = getNumbers()
             numbers?.let {
-                val result = it.first * it.second
-                txtResult.text = "Result: $result"
+                txtResult.text = "Result: ${it.first * it.second}"
             }
         }
 
@@ -65,8 +64,7 @@ class MainActivity : AppCompatActivity() {
                 if (it.second == 0.0) {
                     Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
                 } else {
-                    val result = it.first / it.second
-                    txtResult.text = "Result: $result"
+                    txtResult.text = "Result: ${it.first / it.second}"
                 }
             }
         }
